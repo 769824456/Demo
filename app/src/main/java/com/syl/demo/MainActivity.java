@@ -12,7 +12,9 @@ import android.widget.ArrayAdapter;
 import android.widget.ListView;
 
 import com.syl.demo.FinalActivity.FinalActivityActivity;
+import com.syl.demo.FinalBitmap.FinalBitmapActivity;
 import com.syl.demo.FinalDB.FinalDBActivity;
+import com.syl.demo.FinalHttp.FinalHttpActivity;
 
 import java.util.ArrayList;
 
@@ -47,6 +49,8 @@ public class MainActivity extends AppCompatActivity implements AdapterView.OnIte
         mData = new ArrayList<String>();
         mData.add(FinalDBActivity.TAG);
         mData.add(FinalActivityActivity.TAG);
+        mData.add(FinalHttpActivity.TAG);
+        mData.add(FinalBitmapActivity.TAG);
 
         mAdapter = new ArrayAdapter<String>(this, android.R.layout.simple_list_item_1, mData);
         lvMainContent.setAdapter(mAdapter);
@@ -61,6 +65,10 @@ public class MainActivity extends AppCompatActivity implements AdapterView.OnIte
             intent = new Intent(this,FinalDBActivity.class);
         }else  if(TextUtils.equals(TAG, FinalActivityActivity.TAG)){
             intent = new Intent(this,FinalActivityActivity.class);
+        }else  if(TextUtils.equals(TAG, FinalHttpActivity.TAG)){
+            intent = new Intent(this,FinalHttpActivity.class);
+        }else  if(TextUtils.equals(TAG, FinalBitmapActivity.TAG)){
+            intent = new Intent(this,FinalBitmapActivity.class);
         }
         if (intent != null) {
             startActivity(intent);

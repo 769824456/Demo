@@ -23,7 +23,6 @@ import net.tsz.afinal.annotation.view.ViewInject;
  * NOTE :
  * 侵入式继承FinalActivity
  */
-
 public class FinalActivityActivity extends FragmentActivity {
     public static final String TAG = "FinalActivity";
 
@@ -40,6 +39,9 @@ public class FinalActivityActivity extends FragmentActivity {
         FinalActivity.initInjectedView(this);
     }
 
+    /**
+     * 进入Fragment
+     */
     void enterFragment() {
         FinalFragment finalFragment = new FinalFragment();
         FragmentManager fragmentManager = getSupportFragmentManager();

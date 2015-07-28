@@ -29,6 +29,14 @@
             android:name=".FinalActivity.FinalActivityActivity"
             android:label="@string/title_activity_final" >
         </activity>
+        <activity
+            android:name=".FinalHttp.FinalHttpActivity"
+            android:label="@string/title_activity_final_http" >
+        </activity>
+        <activity
+            android:name=".FinalBitmap.FinalBitmapActivity"
+            android:label="@string/title_activity_final_bitmap" >
+        </activity>
     </application>
 
 </manifest>
